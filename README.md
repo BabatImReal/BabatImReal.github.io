@@ -2,8 +2,8 @@ Welcome to [BabatImReal.github.io]
 Overview
 Welcome to [Your Website Name]! This README will guide you through what our website is all about, its features, and how to use it effectively.
 
-About BabatImReal.github.io
-BabatImReal.github.io is a website that provides my personal portfolio. It was created with the aim of introducing my personal education, academic achievement, my projects and my extra-curricular activities.
+About My website:
+BabatImReal.github.io is a website that visualizes my personal portfolio. It was created with the aim of introducing my personal education, academic achievement, my projects and my extra-curricular activities.
 
 
 ...
