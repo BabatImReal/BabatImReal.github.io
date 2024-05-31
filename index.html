@@ -14,6 +14,17 @@
       <link rel="stylesheet" href="assets/css/styles.css">
 
       <title>Responsive portfolio website Rian - Bedimcode</title>
+      <script type="text/javascript"
+         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <script type="text/javascript">
+         (function(){
+            emailjs.init({
+               publicKey: "8yV7noO1EeHqTU7a0",
+            });
+         })();
+      </script>
+      <script src = "script.js"></script>
    </head>
    <body>
       <!--==================== HEADER ====================-->
@@ -383,7 +394,7 @@
 
                      <p class="contact__message" id="contact-message"></p>
 
-                     <button type="submit" class="contact__button button">
+                     <button type="submit" onclick="sendEmail()" class="contact__button button">
                         <i class="ri-send-plane-line"></i> Send Message
                      </button>
                   </form>
