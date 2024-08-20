@@ -1,16 +1,23 @@
-Welcome to [BabatImReal.github.io]
-Overview
-Welcome to [Your Website Name]! This README will guide you through what our website is all about, its features, and how to use it effectively.
+# Welcome to BabatImReal.github.io
 
-About My website:
-BabatImReal.github.io is a website that visualizes my personal portfolio. It was created with the aim of introducing my personal education, academic achievement, my projects and my extra-curricular activities.
+## Overview
+Welcome to BabatImReal.github.io! This README will guide you through what our website is all about, its features, and how to use it effectively.
 
+## About My Website
+BabatImReal.github.io is a personal portfolio site designed to showcase my education, academic achievements, projects, and extracurricular activities.
 
-...
-How to Use
-Using [BabatImReal] is easy! Just follow these steps:
+## Features
+- **Education**: Detailed information about my academic background and qualifications.
+- **Projects**: An overview of the projects I've worked on, including descriptions, technologies used, and outcomes.
+- **Extracurricular Activities**: Highlights of my involvement in various extracurricular activities and organizations.
 
-It is basic that you can search on Google.com and search for BabatImReal.github.io. After that, you will be able to view my portfolio.
-If you need any assistance or have questions about [Your Website Name], don't hesitate to contact us at [dtdatnguyen04@gmail.com].
+## How to Use
+Navigating and exploring my portfolio is simple. Follow these steps:
+1. Open your web browser and go to [BabatImReal.github.io](https://BabatImReal.github.io).
+2. Browse through the sections to learn more about my education, projects, and activities.
 
-Thank you for your concern!
+## Contact
+If you need any assistance or have questions about the website, feel free to reach out to me at [dtdatnguyen04@gmail.com](mailto:dtdatnguyen04@gmail.com).
+
+Thank you for visiting!
+
