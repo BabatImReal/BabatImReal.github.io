@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Fintech Data Engineering Project - Dat Nguyen</title>
+</head>
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="index.html" class="nav__logo">
+            <span class="nav__logo-circle">D</span>
+            <span class="nav__logo-name">Dat Nguyen.</span>
+         </a>
+
+         <div class="nav__buttons">
+            <!-- Theme button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <!-- Back to home -->
+            <a href="index.html" class="button" style="margin-left: 1rem;">
+               <i class="ri-arrow-left-line"></i> Back to Home
+            </a>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <section class="projects section" style="padding-top: 8rem;">
+         <div class="container">
+            <h2 class="section__title-1" style="text-align: left;">
+               <span>Fintech Data Engineering Project</span>
+            </h2>
+
+            <div class="about__info" style="margin-top: 2rem;">
+               <h2 class="section__title-2" style="text-align: center; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Project Overview</h2>
+               
+               <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 2rem;">
+                  <p style="color: white; font-size: 1.1rem; line-height: 1.8; margin: 0; text-align: center; font-weight: 500;">
+                     A comprehensive end-to-end data engineering solution designed to process, transform, and deliver actionable insights from financial transaction data in real-time.
+                  </p>
+               </div>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                  <div style="background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #667eea;">
+                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="ri-database-2-line" style="font-size: 2rem; color: #667eea; margin-right: 0.75rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.1rem; color: #333;">Data Ingestion</h3>
+                     </div>
+                     <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin: 0;">Built real-time data ingestion using Apache Kafka, streaming transactions from PostgreSQL (OLTP) database into the data lake for immediate processing.</p>
+                  </div>
+
+                  <div style="background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #f093fb;">
+                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="ri-flow-chart" style="font-size: 2rem; color: #f093fb; margin-right: 0.75rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.1rem; color: #333;">Workflow Orchestration</h3>
+                     </div>
+                     <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin: 0;">Orchestrated complex data workflows with Apache Airflow and Dagster for automated scheduling, monitoring, and dependency management across the pipeline.</p>
+                  </div>
+
+                  <div style="background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #4facfe;">
+                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="ri-refresh-line" style="font-size: 2rem; color: #4facfe; margin-right: 0.75rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.1rem; color: #333;">Data Transformation</h3>
+                     </div>
+                     <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin: 0;">Transformed raw data into analytics-ready models using dbt, applying modular SQL transformations, data quality tests, and business logic validation.</p>
+                  </div>
+
+                  <div style="background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #43e97b;">
+                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="ri-cloud-line" style="font-size: 2rem; color: #43e97b; margin-right: 0.75rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.1rem; color: #333;">Cloud Data Warehouse</h3>
+                     </div>
+                     <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin: 0;">Integrated with Snowflake as the cloud data warehouse, optimizing performance through partitioning, clustering, and cost-efficient storage strategies.</p>
+                  </div>
+
+                  <div style="background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #fa709a;">
+                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="ri-code-s-slash-line" style="font-size: 2rem; color: #fa709a; margin-right: 0.75rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.1rem; color: #333;">ETL Automation</h3>
+                     </div>
+                     <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin: 0;">Implemented Python-based ETL scripts for data validation, schema mapping, and pipeline automation ensuring data integrity throughout the process.</p>
+                  </div>
+
+                  <div style="background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #ff9a56;">
+                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="ri-dashboard-line" style="font-size: 2rem; color: #ff9a56; margin-right: 0.75rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.1rem; color: #333;">Analytics & Reporting</h3>
+                     </div>
+                     <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin: 0;">Delivered a reliable data infrastructure supporting real-time dashboards, financial reporting, and advanced analytics for strategic decision-making.</p>
+                  </div>
+               </div>
+
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Technologies Used</h2>
+               
+               <div class="services__container container grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                  <div style="text-align: center;">
+                     <img src="assets/img/kafka-logo.jpg" alt="Apache Kafka" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">Apache Kafka</p>
+                  </div>
+                  <div style="text-align: center;">
+                     <img src="assets/img/airflow-logo.jpg" alt="Airflow" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">Airflow</p>
+                  </div>
+                  <div style="text-align: center;">
+                     <img src="assets/img/dagster-logo.jpg" alt="Dagster" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">Dagster</p>
+                  </div>
+                  <div style="text-align: center;">
+                     <img src="assets/img/dbt-logo.jpg" alt="dbt" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">dbt</p>
+                  </div>
+                  <div style="text-align: center;">
+                     <img src="assets/img/snowflake-logo.jpg" alt="Snowflake" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">Snowflake</p>
+                  </div>
+                  <div style="text-align: center;">
+                     <img src="assets/img/python-logo.jpg" alt="Python" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">Python</p>
+                  </div>
+               </div>
+
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Tech Stack Architecture</h2>
+               
+               <div class="projects__image" style="max-width: 900px; margin: 2rem auto;">
+                  <img src="assets\img\architecture.jpg" alt="Tech Stack Architecture Diagram" class="projects__img" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+               </div>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h3 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-database-2-line" style="margin-right: 0.5rem; font-size: 1.5rem;"></i>
+                        Batch Data Source (Kaggle)
+                     </h3>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.9rem; line-height: 1.6;">Historical financial data sourced from Kaggle for batch processing and analysis.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h3 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-speed-line" style="margin-right: 0.5rem; font-size: 1.5rem;"></i>
+                        Real-time Data Source
+                     </h3>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.9rem; line-height: 1.6;">Live transaction data streaming through Apache Kafka for real-time processing capabilities.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h3 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-radar-line" style="margin-right: 0.5rem; font-size: 1.5rem;"></i>
+                        Event Streaming (Kafka)
+                     </h3>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.9rem; line-height: 1.6;">Apache Kafka handles event streaming and message queuing, ingesting data into PostgreSQL OLTP database.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h3 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-database-line" style="margin-right: 0.5rem; font-size: 1.5rem;"></i>
+                        PostgreSQL (OLTP)
+                     </h3>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.9rem; line-height: 1.6;">Operational database storing transactional data before transformation and loading into the data warehouse.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h3 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-flow-chart" style="margin-right: 0.5rem; font-size: 1.5rem;"></i>
+                        Data Orchestration (Dagster)
+                     </h3>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.9rem; line-height: 1.6;">Dagster orchestrates and schedules data workflows, managing dependencies and pipeline execution.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h3 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-cloud-line" style="margin-right: 0.5rem; font-size: 1.5rem;"></i>
+                        Data Warehouse (Snowflake)
+                     </h3>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.9rem; line-height: 1.6;">Cloud data warehouse with three layers - RAW DATA, STAGED DATA, and ANALYTICS DATA, with dbt handling transformations.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h3 style="color: #333; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-settings-3-line" style="margin-right: 0.5rem; font-size: 1.5rem;"></i>
+                        Transformation Layer (dbt)
+                     </h3>
+                     <p style="color: #555; font-size: 0.9rem; line-height: 1.6;">dbt performs SQL-based transformations, data modeling, and quality tests within Snowflake.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h3 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-robot-line" style="margin-right: 0.5rem; font-size: 1.5rem;"></i>
+                        AI Agent
+                     </h3>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.9rem; line-height: 1.6;">Multiple output formats including Batch processing, Realtime analytics, PDF/Markdown reports, and Combined insights.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h3 style="color: #333; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-search-eye-line" style="margin-right: 0.5rem; font-size: 1.5rem;"></i>
+                        RAG System
+                     </h3>
+                     <p style="color: #555; font-size: 0.9rem; line-height: 1.6;">Retrieval-Augmented Generation system for enhanced data querying and insights generation.</p>
+                  </div>
+               </div>
+
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Dimensional Modelling</h2>
+               
+               <div class="projects__image" style="max-width: 900px; margin: 2rem auto;">
+                  <img src="assets\img\dimensional-modelling.jpg" alt="Dimensional Model Diagram" class="projects__img" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px;">
+               </div>
+
+               <ul class="about__list" style="font-size: 0.9rem;">
+                  <li class="about__item"><strong>Fact Table (FCT_ORDER_ITEM):</strong> Central fact table storing transactional order item data with metrics like quantity, price, shipping costs, and product dimensions.</li>
+                  <li class="about__item"><strong>Dimension Tables:</strong> Supporting dimension tables including DIM_ORDER_PAYMENT (payment details), DIM_SELLER (seller information), DIM_CUSTOMER (customer data), and DIM_PRODUCT (product details).</li>
+                  <li class="about__item"><strong>Dimensional Hierarchy:</strong> Product dimension includes category translation and name length attributes for multi-language support and analytics.</li>
+                  <li class="about__item"><strong>Order Review Dimension:</strong> Tracks customer reviews with review scores, comment messages, and timestamps for sentiment analysis.</li>
+                  <li class="about__item"><strong>Star Schema Design:</strong> Implemented a star schema with fact table at the center connected to dimension tables via foreign key relationships for optimized query performance.</li>
+                  <li class="about__item"><strong>Key Relationships:</strong> Established primary and foreign key relationships between fact and dimension tables ensuring data integrity and efficient joins.</li>
+                  <li class="about__item"><strong>Data Types and Constraints:</strong> Defined appropriate data types (VARCHAR, INT, DATETIME, DECIMAL) with proper constraints for each attribute to ensure data quality.</li>
+               </ul>
+
+               <div class="about__buttons" style="margin-top: 2rem;">
+                  <a href="https://github.com/BabatImReal/fa-dae2-capstone-Tran-Quoc-Dat-Nguyen" target="_blank" class="button">
+                     <i class="ri-github-line"></i> View Repository
+                  </a>
+
+                  <a href="index.html#data-projects" class="button__ghost">
+                     <i class="ri-arrow-left-line"></i> Back to Projects
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+         <ul class="footer__links">
+            <li>
+               <a href="index.html#home" class="footer__link">Home</a>
+            </li>
+            <li>
+               <a href="index.html#about" class="footer__link">About</a>
+            </li>
+            <li>
+               <a href="index.html#data-projects" class="footer__link">Data Projects</a>
+            </li>
+         </ul>
+
+         <span class="footer__copy">
+            &#169; All Rights Reserved By 
+            <a href="#">Dat Nguyen.</a>
+         </span>
+      </div>
+   </footer>
+
+   <!--========== SCROLL UP ==========-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-s-line"></i>
+   </a>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
+</html>
