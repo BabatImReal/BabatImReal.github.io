@@ -17,14 +17,6 @@
       <script type="text/javascript"
          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
       </script>
-      <script type="text/javascript">
-         (function(){
-            emailjs.init({
-               publicKey: "8yV7noO1EeHqTU7a0",
-            });
-         })();
-      </script>
-      <script src = "script.js"></script>
    </head>
    <body>
       <!--==================== HEADER ====================-->
@@ -277,7 +269,7 @@
                      Send Me A Message 
                   </h2>
 
-                  <form action="" method="post" class="contact__form" id="contact-form">
+                  <form action="https://formsubmit.co/dfeaf26899c03036b8982d36d48b48f4" method="POST" class="contact__form" id="contact-form">
                      <div class="contact__group">
                         <div class="contact__box">
                            <input type="text" name="user_name" class="contact__input" id="name" required placeholder="First Name">
@@ -302,7 +294,7 @@
 
                      <p class="contact__message" id="contact-message"></p>
 
-                     <button type="submit" onclick="sendEmail()" class="contact__button button">
+                     <button type="submit"  class="contact__button button">
                         <i class="ri-send-plane-line"></i> Send Message
                      </button>
                   </form>
