@@ -25,7 +25,7 @@ const navLink = document.querySelectorAll('.nav__link')
 const linkAction = () =>{
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
+    if(navMenu) navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
@@ -33,8 +33,10 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 const shadowHeader = () =>{
    const header = document.getElementById('header')
    // When the scroll is greater than 50 viewport height, add the shadow-header class to the header tag
-   this.scrollY >= 50 ? header.classList.add('shadow-header') 
-                      : header.classList.remove('shadow-header')
+   if(header) {
+      this.scrollY >= 50 ? header.classList.add('shadow-header') 
+                         : header.classList.remove('shadow-header')
+   }
 }
 window.addEventListener('scroll', shadowHeader)
 
@@ -42,37 +44,41 @@ window.addEventListener('scroll', shadowHeader)
 const contactForm = document.getElementById('contact-form'),
       contactMessage = document.getElementById('contact-message')
 
-const sendEmail = (e) =>{
-   e.preventDefault()
+if(contactForm) {
+   const sendEmail = (e) =>{
+      e.preventDefault()
 
-   // serviceID - templateID - #form - publicKey
-   emailjs.sendForm('','','#contact-form','')
-      .then(() =>{
-         // Show sent message
-         contactMessage.textContent = 'Message sent successfully ✅'
+      // serviceID - templateID - #form - publicKey
+      emailjs.sendForm('','','#contact-form','')
+         .then(() =>{
+            // Show sent message
+            contactMessage.textContent = 'Message sent successfully ✅'
 
-         // Remove message after five seconds
-         setTimeout(() =>{
-            contactMessage.textContent = ''
-         }, 5000)
+            // Remove message after five seconds
+            setTimeout(() =>{
+               contactMessage.textContent = ''
+            }, 5000)
 
-         // Clear input fields
-         contactForm.reset()
+            // Clear input fields
+            contactForm.reset()
 
-      }, () =>{
-         // Show error message
-         contactMessage.textContent = 'Message not sent (service error) ❌'
-      })
+         }, () =>{
+            // Show error message
+            contactMessage.textContent = 'Message not sent (service error) ❌'
+         })
+   }
+
+   contactForm.addEventListener('submit', sendEmail)
 }
-
-contactForm.addEventListener('submit', sendEmail)
 
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
     // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-						: scrollUp.classList.remove('show-scroll')
+	if(scrollUp) {
+      this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+                          : scrollUp.classList.remove('show-scroll')
+   }
 }
 window.addEventListener('scroll', scrollUp)
 
@@ -88,11 +94,13 @@ const scrollActive = () =>{
 			  sectionId = current.getAttribute('id'),
 			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
 
-		if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-			sectionsClass.classList.add('active-link')
-		}else{
-			sectionsClass.classList.remove('active-link')
-		}                                                    
+		if(sectionsClass) {
+         if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+            sectionsClass.classList.add('active-link')
+         }else{
+            sectionsClass.classList.remove('active-link')
+         }
+      }                                                    
 	})
 }
 window.addEventListener('scroll', scrollActive)
@@ -108,25 +116,29 @@ const selectedIcon = localStorage.getItem('selected-icon')
 
 // We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-sun-line' : 'ri-moon-line'
+const getCurrentIcon = () => themeButton && themeButton.classList.contains(iconTheme) ? 'ri-sun-line' : 'ri-moon-line'
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'ri-sun-line' ? 'add' : 'remove'](iconTheme)
+  if(themeButton) themeButton.classList[selectedIcon === 'ri-sun-line' ? 'add' : 'remove'](iconTheme)
 }
 
 // Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    themeButton.classList.toggle('ri-moon-line')
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})/*=============== SCROLL REVEAL ANIMATION ===============*/
+if(themeButton) {
+   themeButton.addEventListener('click', () => {
+       // Add or remove the dark / icon theme
+       document.body.classList.toggle(darkTheme)
+       themeButton.classList.toggle(iconTheme)
+       themeButton.classList.toggle('ri-moon-line')
+       // We save the theme and the current icon that the user chose
+       localStorage.setItem('selected-theme', getCurrentTheme())
+       localStorage.setItem('selected-icon', getCurrentIcon())
+   })
+}
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
