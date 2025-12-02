@@ -130,6 +130,10 @@
                      <img src="assets/img/python-logo.jpg" alt="Python" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                      <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">Python</p>
                   </div>
+                  <div style="text-align: center;">
+                     <img src="assets/img/metabase-logo.png" alt="Metabase" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">Metabase</p>
+                  </div>
                </div>
 
                <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Tech Stack Architecture</h2>
@@ -227,6 +231,209 @@
                   <li class="about__item"><strong>Key Relationships:</strong> Established primary and foreign key relationships between fact and dimension tables ensuring data integrity and efficient joins.</li>
                   <li class="about__item"><strong>Data Types and Constraints:</strong> Defined appropriate data types (VARCHAR, INT, DATETIME, DECIMAL) with proper constraints for each attribute to ensure data quality.</li>
                </ul>
+
+               <!-- Data Transformation Section -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Data Transformation with dbt</h2>
+               
+               <div style="background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 2rem;">
+                  <p style="color: white; font-size: 1.1rem; line-height: 1.8; margin: 0; text-align: center; font-weight: 500;">
+                     Leveraging dbt (data build tool) to implement a medallion-style architecture, transforming raw batch data into analytics-ready datasets through progressive refinement layers.
+                  </p>
+               </div>
+
+               <div class="projects__image" style="max-width: 1100px; margin: 2rem auto;">
+                  <img src="assets/img/data-transformation.png" alt="dbt Data Transformation Lineage" class="projects__img" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+               </div>
+
+               <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: var(--title-color);">
+                  <i class="ri-stack-line" style="margin-right: 0.5rem;"></i>Medallion Architecture Layers
+               </h3>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                  <div style="background: linear-gradient(135deg, #cd7f32 0%, #8b4513 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-database-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Staging Layer (Bronze)
+                     </h4>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.9rem; line-height: 1.6;">
+                        <strong>Purpose:</strong> Light transformations on raw source data<br>
+                        <strong>Operations:</strong> Type casting, column renaming, basic data cleaning<br>
+                        <strong>Models:</strong> stg__customers, stg__orders, stg__products, stg__sellers, stg__order_items, stg__order_payments, stg__order_reviews
+                     </p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #c0c0c0 0%, #808080 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: white; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-git-merge-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Intermediate Layer (Silver)
+                     </h4>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.9rem; line-height: 1.6;">
+                        <strong>Purpose:</strong> Business logic transformations<br>
+                        <strong>Operations:</strong> Data enrichment, joins, aggregations, business rules<br>
+                        <strong>Models:</strong> int__products (enriched with category translations), int__order_items (with calculated metrics)
+                     </p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #ffd700 0%, #daa520 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: #333; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-star-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Analytics Layer (Gold)
+                     </h4>
+                     <p style="color: #444; font-size: 0.9rem; line-height: 1.6;">
+                        <strong>Purpose:</strong> Star schema implementation for analytics<br>
+                        <strong>Operations:</strong> Dimension & fact table creation, surrogate keys<br>
+                        <strong>Models:</strong> dim_customers, dim_products, dim_sellers, dim_order_payment, dim_order_reviews, dim_date, fact_orders
+                     </p>
+                  </div>
+               </div>
+
+               <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: var(--title-color);">
+                  <i class="ri-flow-chart" style="margin-right: 0.5rem;"></i>Transformation Flow
+               </h3>
+
+               <ul class="about__list" style="font-size: 0.9rem;">
+                  <li class="about__item"><strong>Source to Staging:</strong> Raw data from sc_raw_data tables flows through snapshots for CDC (Change Data Capture), then to staging models with consistent naming and type casting.</li>
+                  <li class="about__item"><strong>Staging to Intermediate:</strong> Staged data is enriched with business logic - products joined with category translations, order items with calculated shipping metrics.</li>
+                  <li class="about__item"><strong>Intermediate to Analytics:</strong> Final transformation into star schema with dimension tables (dim_*) surrounding the central fact_orders table for optimal query performance.</li>
+                  <li class="about__item"><strong>dbt Snapshots:</strong> Implemented SCD Type 2 snapshots for tracking historical changes in customers, products, sellers, orders, and order items.</li>
+                  <li class="about__item"><strong>Data Quality:</strong> dbt tests applied at each layer for uniqueness, not null constraints, referential integrity, and accepted value validations.</li>
+               </ul>
+
+               <!-- Data Orchestration Section -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Data Orchestration</h2>
+               
+               <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 2rem;">
+                  <p style="color: white; font-size: 1.1rem; line-height: 1.8; margin: 0; text-align: center; font-weight: 500;">
+                     Implementing robust workflow orchestration to automate data pipeline execution, manage dependencies, and ensure reliable data delivery through scheduled and event-driven triggers.
+                  </p>
+               </div>
+
+               <!-- Dagster Subsection -->
+               <h3 style="font-size: 1.35rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: var(--title-color); display: flex; align-items: center;">
+                  <i class="ri-compass-3-line" style="margin-right: 0.5rem; color: #7c3aed;"></i>Dagster Orchestration
+               </h3>
+
+               <div class="projects__image" style="max-width: 900px; margin: 2rem auto;">
+                  <img src="assets/img/dagster-orchestration.png" alt="Dagster Data Orchestration" class="projects__img" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+               </div>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                  <div style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: white; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-box-3-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Asset-Based Architecture
+                     </h4>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.85rem; line-height: 1.6;">Dagster's software-defined assets allow declarative pipeline definition. Each data asset (tables, models) is defined with its dependencies, enabling automatic lineage tracking and materialization.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: white; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-upload-cloud-2-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Batch Ingestion Job
+                     </h4>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.85rem; line-height: 1.6;">Orchestrates CSV file loading from source to Snowflake. Handles batch_csv_files extraction and snowfl__batch_data staging, ensuring data lands in the raw layer before transformation.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: white; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-refresh-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        dbt Transformation Job
+                     </h4>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.85rem; line-height: 1.6;">Triggers dbt runs after successful ingestion. Executes snapshot refreshes, staging models, intermediate transformations, and analytics layer builds in proper dependency order.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: white; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-eye-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Observability & Monitoring
+                     </h4>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.85rem; line-height: 1.6;">Built-in asset lineage visualization, run history, and failure alerting. Dagster UI provides real-time pipeline status, asset materialization history, and data quality insights.</p>
+                  </div>
+               </div>
+
+               <ul class="about__list" style="font-size: 0.9rem; margin-top: 1.5rem;">
+                  <li class="about__item"><strong>Pipeline Flow:</strong> batch_ingestion → dbt_transformation with clear dependency management ensuring transformations only run after successful data landing.</li>
+                  <li class="about__item"><strong>Snapshot Orchestration:</strong> Automated execution of dbt snapshots (order_it__snapshot, orders_snapshot, customers_snapshot, etc.) for SCD Type 2 tracking.</li>
+                  <li class="about__item"><strong>Fact Table Materialization:</strong> Final fact_orders asset depends on all dimension tables (dim_customers, dim_date, dim_order_payment, dim_products, dim_sellers) being materialized first.</li>
+                  <li class="about__item"><strong>Scheduling:</strong> Configured schedules for daily batch runs with partition support for incremental processing and backfills.</li>
+               </ul>
+
+               <!-- Airflow Subsection (Coming Soon) -->
+               <h3 style="font-size: 1.35rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--title-color); display: flex; align-items: center;">
+                  <i class="ri-plane-line" style="margin-right: 0.5rem; color: #017cee;"></i>Apache Airflow Orchestration
+                  <span style="background: #e0e7ff; color: #4338ca; font-size: 0.7rem; padding: 0.25rem 0.75rem; border-radius: 20px; margin-left: 0.75rem; font-weight: 600;">Coming Soon</span>
+               </h3>
+               <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); font-style: italic;">
+                  Alternative orchestration implementation using Apache Airflow DAGs will be documented here, showcasing task-based workflow management and comparison with Dagster's asset-centric approach.
+               </p>
+
+               <!-- Analytics Dashboard Section -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Analytics Dashboard</h2>
+               
+               <div class="projects__image" style="max-width: 1000px; margin: 2rem auto;">
+                  <img src="assets/img/analytics-dashboard.png" alt="Analytics Dashboard" class="projects__img" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+               </div>
+
+               <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: var(--title-color);">
+                  <i class="ri-bar-chart-box-line" style="margin-right: 0.5rem;"></i>Analytics Overview
+               </h3>
+               <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem; color: var(--text-color);">
+                  This interactive dashboard provides comprehensive insights into e-commerce order performance, customer behavior, and payment trends. Built using the dimensional model above, it enables stakeholders to monitor KPIs, identify patterns, and make data-driven decisions for business optimization.
+               </p>
+
+               <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: var(--title-color);">
+                  <i class="ri-pie-chart-line" style="margin-right: 0.5rem;"></i>Visualizations & Insights
+               </h3>
+               
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: white; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-bar-chart-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Total Orders by Year
+                     </h4>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.85rem; line-height: 1.6;"><strong>Chart Type:</strong> Bar Chart<br><strong>Insight:</strong> Shows year-over-year order growth from ~10K (2016) to ~55K (2018), indicating strong business expansion and increasing customer adoption.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: white; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-donut-chart-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Order Proportion by Category
+                     </h4>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.85rem; line-height: 1.6;"><strong>Chart Type:</strong> Donut Chart<br><strong>Insight:</strong> Bed/bath/table leads at 9.42%, followed by health/beauty (8.92%). Diverse category distribution across 98,666 total orders shows balanced product portfolio.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: white; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-bar-chart-horizontal-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Total Reviews by Tier
+                     </h4>
+                     <p style="color: rgba(255,255,255,0.95); font-size: 0.85rem; line-height: 1.6;"><strong>Chart Type:</strong> Horizontal Bar Chart<br><strong>Insight:</strong> "Excellent" reviews dominate (~58K), indicating high customer satisfaction. Declining counts for lower ratings suggests strong product/service quality.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: #333; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-timer-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Avg. Shipping Time
+                     </h4>
+                     <p style="color: #444; font-size: 0.85rem; line-height: 1.6;"><strong>Chart Type:</strong> KPI Card<br><strong>Insight:</strong> Average 12.5 days shipping time serves as a baseline metric for logistics optimization and setting customer delivery expectations.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: #333; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-star-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Avg. Review Score
+                     </h4>
+                     <p style="color: #444; font-size: 0.85rem; line-height: 1.6;"><strong>Chart Type:</strong> KPI Card<br><strong>Insight:</strong> Score of 4.1/5 reflects positive customer experience. This metric helps track satisfaction trends and identify improvement areas.</p>
+                  </div>
+
+                  <div style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                     <h4 style="color: #333; font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center;">
+                        <i class="ri-line-chart-line" style="margin-right: 0.5rem; font-size: 1.3rem;"></i>
+                        Payment Types Over 12 Months
+                     </h4>
+                     <p style="color: #444; font-size: 0.85rem; line-height: 1.6;"><strong>Chart Type:</strong> Multi-line Chart<br><strong>Insight:</strong> Credit card dominates payment methods with peak usage around month 8. Boleto (local payment) shows steady usage, while vouchers and debit cards remain secondary options.</p>
+                  </div>
+               </div>
 
                <div class="about__buttons" style="margin-top: 2rem;">
                   <a href="https://github.com/BabatImReal/fa-dae2-capstone-Tran-Quoc-Dat-Nguyen" target="_blank" class="button">
