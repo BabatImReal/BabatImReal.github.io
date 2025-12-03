@@ -159,6 +159,10 @@ body.dark-theme {
   background-color: var(--body-color);
 }
 
+.dark-theme .change-theme {
+  color: var(--white-color);
+}
+
 .dark-theme :is(.contact__mail, .contact__input, .contact__label) {
   background-color: var(--container-color);
 }
