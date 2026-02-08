@@ -40,35 +40,16 @@ const shadowHeader = () =>{
 }
 window.addEventListener('scroll', shadowHeader)
 
-/*=============== EMAIL JS ===============*/
+/*=============== CONTACT FORM (FORM SUBMIT) ===============*/
 const contactForm = document.getElementById('contact-form'),
       contactMessage = document.getElementById('contact-message')
 
-if(contactForm) {
-   const sendEmail = (e) =>{
-      e.preventDefault()
-
-      // serviceID - templateID - #form - publicKey
-      emailjs.sendForm('','','#contact-form','')
-         .then(() =>{
-            // Show sent message
-            contactMessage.textContent = 'Message sent successfully ✅'
-
-            // Remove message after five seconds
-            setTimeout(() =>{
-               contactMessage.textContent = ''
-            }, 5000)
-
-            // Clear input fields
-            contactForm.reset()
-
-         }, () =>{
-            // Show error message
-            contactMessage.textContent = 'Message not sent (service error) ❌'
-         })
-   }
-
-   contactForm.addEventListener('submit', sendEmail)
+// Let the browser submit the form to FormSubmit (no EmailJS),
+// just show a quick status message before redirect.
+if (contactForm && contactMessage) {
+   contactForm.addEventListener('submit', () => {
+      contactMessage.textContent = 'Sending your message...';
+   })
 }
 
 /*=============== SHOW SCROLL UP ===============*/ 
