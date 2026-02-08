@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Bike Sharing Data Analytics Project - Dat Nguyen</title>
+</head>
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="index.html" class="nav__logo">
+            <span class="nav__logo-circle">D</span>
+            <span class="nav__logo-name">Tran Quoc Dat Nguyen</span>
+         </a>
+
+         <div class="nav__buttons">
+            <!-- Theme button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <!-- Back to home -->
+            <a href="index.html" class="button" style="margin-left: 1rem;">
+               <i class="ri-arrow-left-line"></i> Back to Home
+            </a>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <section class="projects section" style="padding-top: 8rem;">
+         <div class="container">
+            <h2 class="section__title-1" style="text-align: left;">
+               <span>Bike Sharing Data Analytics Project</span>
+            </h2>
+
+            <div class="about__info" style="margin-top: 2rem;">
+               <h2 class="section__title-2" style="text-align: center; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Project Overview</h2>
+               
+               <div style="background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%); padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 2rem;">
+                  <p style="color: white; font-size: 1.1rem; line-height: 1.8; margin: 0; text-align: center; font-weight: 500;">
+                     End-to-end analytics project that transforms raw bike sharing data into interactive dashboards and a public-facing web application, providing deep insights into rider behavior, station performance, and the impact of weather across a full year of operations.
+                  </p>
+               </div>
+
+               <div class="about__buttons" style="margin: 0 auto 2rem auto; display: flex; justify-content: center; gap: 1rem;">
+                  <a href="https://bike-share-app.vercel.app/" target="_blank" class="button">
+                     <i class="ri-global-line"></i> View Live App
+                  </a>
+               </div>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                  <div style="background: var(--container-color); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #1d4ed8;">
+                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="ri-bar-chart-2-line" style="font-size: 2rem; color: #1d4ed8; margin-right: 0.75rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.1rem; color: var(--title-color);">Usage & Operations Analysis</h3>
+                     </div>
+                     <p style="color: var(--text-color); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Analyzed 12 months of bike-sharing data with over 100,000 trip records and 4,000+ station status entries to uncover usage patterns, demand peaks, and operational bottlenecks across the system.
+                     </p>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #22c55e;">
+                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="ri-database-2-line" style="font-size: 2rem; color: #22c55e; margin-right: 0.75rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.1rem; color: var(--title-color);">Data Engineering with Python & dbt</h3>
+                     </div>
+                     <p style="color: var(--text-color); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Processed and transformed raw data from trips, stations, weather, and station status into clean, well-modeled datasets using Python scripts and dbt models, enabling reliable downstream analytics.
+                     </p>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #06b6d4;">
+                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="ri-pie-chart-line" style="font-size: 2rem; color: #06b6d4; margin-right: 0.75rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.1rem; color: var(--title-color);">Metabase Analytics Dashboard</h3>
+                     </div>
+                     <p style="color: var(--text-color); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Designed an interactive Metabase dashboard with 20+ visualizations to explore rider segments, trip patterns, station throughput, and how weather conditions influence ridership over time.
+                     </p>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #f97316;">
+                     <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <i class="ri-global-line" style="font-size: 2rem; color: #f97316; margin-right: 0.75rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.1rem; color: var(--title-color);">Public Analytics Web App</h3>
+                     </div>
+                     <p style="color: var(--text-color); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Built and deployed a public-facing analytics web application that embeds Metabase dashboards and narrative insights, allowing users to intuitively explore bike usage trends.
+                     </p>
+                  </div>
+               </div>
+
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 0.75rem; font-size: 1.75rem; font-weight: 700;">Motivation & Goals</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto 2rem auto;">
+                  This project started from a simple question: how can data make bike sharing more convenient for everyday riders? I wanted to go beyond static reports and explore richer, time-based data to understand how a city-wide network of bikes actually behaves throughout the day, across seasons, and under different weather conditions. A key goal is to surface this information in a way that helps users quickly find the nearest station with both available bikes and free racks, reducing uncertainty and making the system feel more reliable. By combining detailed operational data with an intuitive interface, the project aims to bridge the gap between raw infrastructure metrics and practical, rider‑centric insights.
+               </p>
+
+               <h2 class="section__title-2" style="text-align: center; margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Project Structure: Historical & Real-time</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto 1.5rem auto;">
+                  The project is split into two main parts. The first focuses on <b>historical analysis</b> using the
+                  <a href="https://www.kaggle.com/datasets/benhamner/sf-bay-area-bike-share" target="_blank" style="color: #2563eb; text-decoration: underline;">SF Bay Area Bike Share</a>
+                  dataset from Kaggle. This data is cleaned, modeled, and used to build analytical tables and BI visualizations that answer questions about long-term usage patterns, popular routes, and station performance over time.
+               </p>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto 2rem auto;">
+                  The second part focuses on <b>real-time analytics</b>. Live station data is fetched from the public Nextbike API and ingested into <b>NeonDB</b>, where it powers real-time dashboards embedded in the
+                  <a href="https://bike-share-app.vercel.app/" target="_blank" style="color: #2563eb; text-decoration: underline;">bike sharing web application</a>.
+                  The website exposes both a real-time BI dashboard and an interactive map, allowing users to see the current status of each station and quickly find nearby locations with available bikes and free racks.
+               </p>
+
+               <h2 class="section__title-2" style="text-align: center; margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Dataset: Nextbike API</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto;">
+                  The project is powered by data collected from the public Nextbike API, which exposes real-time information about bike sharing systems across multiple cities. The dataset combines live station status and availability (bikes, docks, coordinates), network metadata (cities, networks, station attributes), and time-based snapshots of usage into a single analytics layer. By regularly pulling and storing these API feeds, the project reconstructs a year of operations, enabling analysis of when and where bikes are checked out or returned, how station utilization evolves over time, and how external factors such as time of day, day of week, and weather conditions influence demand.
+               </p>
+
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Data Workflow & Architecture</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto 1.5rem auto;">
+                  The architecture combines a batch analytics pipeline for historical data with a real-time pipeline for live station status. Both flows are designed to land data in well-modeled tables that power Metabase dashboards and the public web application.
+               </p>
+               <div class="projects__image" style="max-width: 1000px; margin: 1.5rem auto 2rem auto;">
+                  <img src="assets/img/bike-architecture.png" alt="Bike Sharing Data Workflow Architecture" class="projects__img" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+               </div>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto 2rem auto;">
+                  <div style="background: var(--container-color); border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-left: 4px solid #1d4ed8;">
+                     <h3 style="margin: 0 0 0.75rem 0; font-size: 1.05rem; color: var(--title-color);">Historical Batch Pipeline</h3>
+                     <p style="margin: 0; font-size: 0.9rem; color: var(--text-color); line-height: 1.6;">
+                        Kaggle trip, station, and weather files are ingested and cleaned with Python, then transformed with dbt into dimensional tables (trips, stations, time, weather). These curated models feed Metabase dashboards and PDF reports that summarize long-term usage patterns and station performance.
+                     </p>
+                  </div>
+                  <div style="background: var(--container-color); border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-left: 4px solid #22c55e;">
+                     <h3 style="margin: 0 0 0.75rem 0; font-size: 1.05rem; color: var(--title-color);">Real-time Pipeline</h3>
+                     <p style="margin: 0; font-size: 0.9rem; color: var(--text-color); line-height: 1.6;">
+                        The Nextbike API is polled on a schedule to capture live station status snapshots. These events are ingested into NeonDB, where they are stored in analytics-ready tables and exposed through Metabase and a Next.js frontend. The website reads directly from this real-time layer to render the live dashboard and interactive map of stations, bikes, and docks.
+                     </p>
+                  </div>
+               </div>
+
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Dimensional Modeling for Analytics</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto 1.5rem auto;">
+                  To support fast and flexible analysis, the cleaned data is organized into a star schema with a central <b>fact_station_status</b> table and several dimensions. Each row in the fact table captures the status of a station at a specific point in time (bikes and docks available), while the dimensions provide rich context for slicing and filtering the metrics.
+               </p>
+               <div class="projects__image" style="max-width: 600px; margin: 1.5rem auto;">
+                  <img src="assets/img/bike-dim-model.png" alt="Bike Sharing Dimensional Model" class="projects__img" style="width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.06);">
+               </div>
+               <ul class="about__list" style="font-size: 0.9rem; max-width: 900px; margin: 0 auto 2rem auto; color: var(--text-color);">
+                  <li class="about__item"><b>dim_station</b> stores station attributes such as name, location (latitude/longitude), dock count, city, and installation date.</li>
+                  <li class="about__item"><b>dim_time</b> breaks the timeline into hour, day, month, year, and day of week to enable time-series and peak-period analysis.</li>
+                  <li class="about__item"><b>dim_weather</b> captures daily weather measures (temperature, humidity, wind, precipitation, events, etc.) that can be joined to station status to study weather impact on demand.</li>
+                  <li class="about__item"><b>dim_trip</b> links trips back to stations and time, enabling combined views of historical trip volume with live availability patterns.</li>
+               </ul>
+
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Historical Analytics Dashboards</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto 1.5rem auto;">
+                  The historical part of the project is summarized in two Metabase dashboards built on top of the dimensional model. Below are embedded previews of the reports so you can quickly see the key views used to analyze trips and station performance.
+               </p>
+
+               <div class="projects__image" style="max-width: 900px; margin: 1.5rem auto;">
+                  <object data="assets/img/Metabase%20-%20Trip%20Summary%20Dashboard.pdf" type="application/pdf" style="width: 100%; height: 420px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                     <a href="assets/img/Metabase%20-%20Trip%20Summary%20Dashboard.pdf" target="_blank">View Trip Summary Dashboard (PDF)</a>
+                  </object>
+                  <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-color-light); text-align: center;">Trip Summary dashboard – trips over time, duration distributions, and usage patterns.</p>
+               </div>
+
+               <div class="projects__image" style="max-width: 900px; margin: 1.5rem auto 2rem auto;">
+                  <object data="assets/img/Metabase%20-%20Station%20Status%20Dashboard.pdf" type="application/pdf" style="width: 100%; height: 420px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+                     <a href="assets/img/Metabase%20-%20Station%20Status%20Dashboard.pdf" target="_blank">View Station Status Dashboard (PDF)</a>
+                  </object>
+                  <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-color-light); text-align: center;">Station Status dashboard – live-style view of bikes and docks available by station.</p>
+               </div>
+
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Technologies Used</h2>
+               
+               <div class="services__container container grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                  <div style="text-align: center;">
+                     <img src="assets/img/python-logo.jpg" alt="Python" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #fff; padding: 10px;">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">Python</p>
+                  </div>
+                  <div style="text-align: center;">
+                     <img src="assets/img/dbt-logo.jpg" alt="dbt" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #fff; padding: 10px;">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">dbt</p>
+                  </div>
+                  <div style="text-align: center;">
+                     <img src="assets/img/metabase-logo.jpg" alt="Metabase" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #fff; padding: 10px;">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">Metabase</p>
+                  </div>
+                  <div style="text-align: center;">
+                     <img src="assets/img/neondb.png" alt="NeonDB" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #fff; padding: 10px;">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">NeonDB</p>
+                  </div>
+                  <div style="text-align: center;">
+                     <img src="assets/img/nextjs.png" alt="Next.js" style="width: 120px; height: 120px; object-fit: contain; margin: 0 auto; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #fff; padding: 10px;">
+                     <p style="margin-top: 0.5rem; font-size: 0.9rem; font-weight: 600;">Next.js</p>
+                  </div>
+               </div>
+
+               <div class="about__buttons" style="margin-top: 2rem;">
+                  <a href="https://bike-share-app.vercel.app/" target="_blank" class="button">
+                     <i class="ri-global-line"></i> View Live App
+                  </a>
+
+                  <a href="index.html#data-projects" class="button__ghost">
+                     <i class="ri-arrow-left-line"></i> Back to Projects
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+         <ul class="footer__links">
+            <li>
+               <a href="index.html#home" class="footer__link">Home</a>
+            </li>
+            <li>
+               <a href="index.html#about" class="footer__link">About</a>
+            </li>
+            <li>
+               <a href="index.html#data-projects" class="footer__link">Data Projects</a>
+            </li>
+         </ul>
+
+         <span class="footer__copy">
+            &#169; All Rights Reserved By 
+            <a href="#">Dat Nguyen.</a>
+         </span>
+      </div>
+   </footer>
+
+   <!--========== SCROLL UP ==========-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-s-line"></i>
+   </a>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
+</html>
