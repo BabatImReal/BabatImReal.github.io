@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>AI Interview Project - Dat Nguyen</title>
+</head>
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="index.html" class="nav__logo">
+            <span class="nav__logo-circle">D</span>
+            <span class="nav__logo-name">Tran Quoc Dat Nguyen</span>
+         </a>
+
+         <div class="nav__buttons">
+            <!-- Theme button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <!-- Back to home -->
+            <a href="index.html" class="button" style="margin-left: 1rem;">
+               <i class="ri-arrow-left-line"></i> Back to Home
+            </a>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <section class="projects section" style="padding-top: 8rem;">
+         <div class="container">
+            <h2 class="section__title-1" style="text-align: left;">
+               <span>AI Interview Project</span>
+            </h2>
+
+            <div class="about__info" style="margin-top: 2rem;">
+               <!-- Project Overview -->
+               <h2 class="section__title-2" style="text-align: center; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Project Overview</h2>
+
+               <div style="background: linear-gradient(135deg, #0f172a 0%, #4f46e5 40%, #22c55e 100%); padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 2rem;">
+                  <p style="color: white; font-size: 1.05rem; line-height: 1.8; margin: 0; text-align: center; font-weight: 500;">
+                     AI-focused project exploring how large language models can support interview preparation, from generating realistic questions to analyzing answers and giving structured feedback.
+                  </p>
+               </div>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #22c55e;">
+                     <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <i class="ri-question-answer-line" style="font-size: 1.8rem; color: #22c55e; margin-right: 0.6rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.05rem; color: var(--title-color);">Dynamic Question Generation</h3>
+                     </div>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Uses AI to generate behavioral and technical questions tailored to the role, difficulty level, and topics that the user selects.
+                     </p>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #f97316;">
+                     <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <i class="ri-mic-line" style="font-size: 1.8rem; color: #f97316; margin-right: 0.6rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.05rem; color: var(--title-color);">Answer Capture & Analysis</h3>
+                     </div>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Collects user answers (typed or transcribed) and runs them through an evaluation rubric to highlight strengths, gaps, and suggested improvements.
+                     </p>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #06b6d4;">
+                     <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <i class="ri-bar-chart-2-line" style="font-size: 1.8rem; color: #06b6d4; margin-right: 0.6rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.05rem; color: var(--title-color);">Feedback & Progress Tracking</h3>
+                     </div>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Summarizes each session with ratings and concrete tips, helping users track improvement over time across competencies like communication and problem solving.
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Problem & Goals -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Problem & Goals</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto 1.5rem auto;">
+                  Many candidates struggle to get realistic interview practice and objective feedback. This project aims to build an always-available AI interviewer that can simulate common interview scenarios and give structured, repeatable feedback.
+               </p>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto 2rem auto;">
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.6rem 0; font-size: 1.02rem; color: var(--title-color);">Key Objectives</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>Generate diverse, role-appropriate interview questions automatically.</li>
+                        <li>Evaluate answers against clear criteria (structure, clarity, depth, relevance).</li>
+                        <li>Provide actionable suggestions that users can immediately apply.</li>
+                     </ul>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.6rem 0; font-size: 1.02rem; color: var(--title-color);">Target Users</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>Students preparing for internships or graduate roles.</li>
+                        <li>Professionals practicing for data or software engineering interviews.</li>
+                        <li>Anyone who wants structured practice without a human partner.</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <!-- Architecture & Workflow -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Architecture & Workflow</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto 1.5rem auto;">
+                  The project is built as a lightweight web application that orchestrates prompt templates, language model calls, and evaluation logic.
+               </p>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto 2rem auto;">
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.6rem 0; font-size: 1.02rem; color: var(--title-color);">Core Components</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>Question Generator: creates interview questions based on role, topic, and difficulty.</li>
+                        <li>Answer Analyzer: scores answers and extracts key strengths and weaknesses.</li>
+                        <li>Feedback Engine: formats feedback into structured rubrics and tips.</li>
+                     </ul>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.6rem 0; font-size: 1.02rem; color: var(--title-color);">Typical Session Flow</h3>
+                     <ol style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>User selects role, type of interview, and topics.</li>
+                        <li>System generates a set of questions and presents them one by one.</li>
+                        <li>User answers; the system evaluates and stores results.</li>
+                        <li>Session summary displays scores, feedback, and suggested next steps.</li>
+                     </ol>
+                  </div>
+               </div>
+
+               <!-- Tools & Technologies -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Tools & Technologies</h2>
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; max-width: 900px; margin: 0 auto 2rem auto;">
+                  <div style="background: var(--container-color); padding: 1.2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.4rem 0; font-size: 1rem; color: var(--title-color);">Languages & Frameworks</h3>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Python, Streamlit or a similar web framework, REST/HTTP for API calls.
+                     </p>
+                  </div>
+                  <div style="background: var(--container-color); padding: 1.2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.4rem 0; font-size: 1rem; color: var(--title-color);">AI & NLP</h3>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Large language model API (e.g., OpenAI), prompt engineering, evaluation prompts.
+                     </p>
+                  </div>
+                  <div style="background: var(--container-color); padding: 1.2rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.4rem 0; font-size: 1rem; color: var(--title-color);">Data & Storage</h3>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Lightweight database or cloud storage to keep session history and feedback.
+                     </p>
+                  </div>
+               </div>
+
+               <!-- UI Prototypes & Screens -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">UI Prototypes & Screens</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto 1.5rem auto;">
+                  The interface was prototyped as a clean admin-style web app with dedicated pages for dashboard, interviews, candidates, reports, analytics, and settings. Below are example screens from the working prototype.
+               </p>
+
+               <div class="projects__image" style="max-width: 1100px; margin: 1.5rem auto 2.5rem auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+                  <img src="assets/img/AI_Interview_Dashboard.png" alt="InterviewAI dashboard screen" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+                  <img src="assets/img/AI_Interview_Interviews.png" alt="Interview list screen" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+                  <img src="assets/img/AI_Interview_Candidates.png" alt="Candidates management screen" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+                  <img src="assets/img/AI_Interview_Reports.png" alt="Reports and scores screen" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+                  <img src="assets/img/AI_Interview_Analytics.png" alt="Analytics dashboard screen" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+                  <img src="assets/img/AI_Interview_Settings.png" alt="User profile and settings screen" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+               </div>
+
+               <!-- Learnings -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">What I Learned</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 900px; margin: 0 auto 2.5rem auto;">
+                  This project strengthened my understanding of prompt design, evaluation of language-model outputs, and how to wrap AI capabilities in a user-friendly web experience. It also reinforced good practices around separating prompt templates, business logic, and UI concerns.
+               </p>
+
+               <div class="about__buttons" style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+                  <a href="https://interviewai-app.vercel.app/" target="_blank" class="button">
+                     <i class="ri-global-line"></i> View Live App
+                  </a>
+
+                  <a href="index.html#data-projects" class="button__ghost">
+                     <i class="ri-arrow-left-line"></i> Back to Projects
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+         <ul class="footer__links">
+            <li>
+               <a href="index.html#home" class="footer__link">Home</a>
+            </li>
+            <li>
+               <a href="index.html#about" class="footer__link">About</a>
+            </li>
+            <li>
+               <a href="index.html#data-projects" class="footer__link">Data Projects</a>
+            </li>
+         </ul>
+
+         <span class="footer__copy">
+            &#169; All Rights Reserved By 
+            <a href="#">Dat Nguyen.</a>
+         </span>
+      </div>
+   </footer>
+
+   <!--========== SCROLL UP ==========-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-s-line"></i>
+   </a>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
+</html>
