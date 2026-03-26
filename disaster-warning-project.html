@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Online Disaster Warning System - Dat Nguyen</title>
+</head>
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="index.html" class="nav__logo">
+            <span class="nav__logo-circle">D</span>
+            <span class="nav__logo-name">Tran Quoc Dat Nguyen</span>
+         </a>
+
+         <div class="nav__buttons">
+            <!-- Theme button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <!-- Back to home -->
+            <a href="index.html" class="button" style="margin-left: 1rem;">
+               <i class="ri-arrow-left-line"></i> Back to Home
+            </a>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <section class="projects section" style="padding-top: 8rem;">
+         <div class="container">
+            <h2 class="section__title-1" style="text-align: left;">
+               <span>Online Disaster Warning System</span>
+            </h2>
+
+            <!-- Project hero / overview -->
+            <div class="about__info" style="margin-top: 2rem;">
+               <h2 class="section__title-2" style="text-align: center; margin-bottom: 1rem; font-size: 1.75rem; font-weight: 700;">Project Overview</h2>
+
+               <div style="background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 40%, #22c55e 100%); padding: 2rem; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 2rem;">
+                  <p style="color: white; font-size: 1.05rem; line-height: 1.8; margin: 0; text-align: center; font-weight: 500;">
+                     Full-stack disaster monitoring web application built with Python and Streamlit that combines real-time alerts, interactive maps, user-generated incident reports, an information hub, and role-based administration to support emergency management and public safety.
+                  </p>
+               </div>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #22c55e;">
+                     <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <i class="ri-radar-line" style="font-size: 1.8rem; color: #22c55e; margin-right: 0.6rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.05rem; color: var(--title-color);">Real-time Monitoring</h3>
+                     </div>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Aggregates alerts from external feeds (e.g., GDACS), automatic weather thresholds, manual inputs, and user reports into a unified, real-time dashboard and interactive map.
+                     </p>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #f97316;">
+                     <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <i class="ri-group-line" style="font-size: 1.8rem; color: #f97316; margin-right: 0.6rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.05rem; color: var(--title-color);">Role-based Access</h3>
+                     </div>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Supports unauthenticated users, subscribers, reporters, coordinators, and admins, each with tailored capabilities for viewing, reporting, validating, and managing alerts and news.
+                     </p>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #06b6d4;">
+                     <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <i class="ri-mail-send-line" style="font-size: 1.8rem; color: #06b6d4; margin-right: 0.6rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.05rem; color: var(--title-color);">Targeted Notifications</h3>
+                     </div>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Email-based subscription service that verifies users, stores location preferences, and sends personalized alerts when incidents or weather events affect their area.
+                     </p>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #8b5cf6;">
+                     <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <i class="ri-news-line" style="font-size: 1.8rem; color: #8b5cf6; margin-right: 0.6rem;"></i>
+                        <h3 style="margin: 0; font-size: 1.05rem; color: var(--title-color);">Information Hub</h3>
+                     </div>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Curated news, tips, and preparedness content stored in MongoDB and managed by admins/reporters to educate communities before and during emergencies.
+                     </p>
+                  </div>
+               </div>
+
+               <!-- Requirements / Use Cases -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">User Requirements & Core Use Cases</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 950px; margin: 0 auto 1.5rem auto;">
+                  Requirements were gathered iteratively and organized in Trello, covering both functional and non-functional aspects. The main functional requirements are captured as use cases for different actor roles:
+               </p>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 950px; margin: 0 auto 2rem auto;">
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.6rem 0; font-size: 1.05rem; color: var(--title-color);">Authentication & User Management</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>User Login with role-based dashboards (Admin / Coordinator / Reporter).</li>
+                        <li>Admin creates new user accounts via secure, email-verified workflow.</li>
+                        <li>Session management and password hashing backed by MongoDB.</li>
+                     </ul>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.6rem 0; font-size: 1.05rem; color: var(--title-color);">Interactive Map & Dashboard</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>View Disaster Alert Map with interactive polygons and markers.</li>
+                        <li>Alert dashboard: sortable table, filters, metrics, and pie charts by disaster type.</li>
+                        <li>"Show My Location" to check whether the user is inside any alert area.</li>
+                     </ul>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.6rem 0; font-size: 1.05rem; color: var(--title-color);">News & Information Hub</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>Guests browse emergency information and preparedness tips.</li>
+                        <li>Admins/Reporters create, edit, and delete news articles with images and tags.</li>
+                        <li>Old content can be archived or removed to control storage.</li>
+                     </ul>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.6rem 0; font-size: 1.05rem; color: var(--title-color);">Notifications & Subscriptions</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>Guests subscribe using verified email and optional location.</li>
+                        <li>Subscribers can unsubscribe via UI or tokenized email link.</li>
+                        <li>System sends batched or on-demand alert emails for relevant incidents and weather events.</li>
+                     </ul>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.6rem 0; font-size: 1.05rem; color: var(--title-color);">Incident Reporting & Validation</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>Public users submit disaster reports with contact info, location, and optional images.</li>
+                        <li>Admins/Coordinators review, approve, or reject reports in a dedicated review UI.</li>
+                        <li>Approved reports create alerts; subscribers in affected areas are notified.</li>
+                     </ul>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.6rem 0; font-size: 1.05rem; color: var(--title-color);">Alert Lifecycle Management</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>Create Alerts: from external API, weather triggers, manual entry, or reports.</li>
+                        <li>Update Alerts: refine severity, timing, or description as new information arrives.</li>
+                        <li>Dismiss Alerts: mark incidents resolved or false alarm while keeping history.</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <!-- Use Case Diagram -->
+               <h2 class="section__title-2" style="text-align: center; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Use Case Diagram</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 950px; margin: 0 auto 1.5rem auto;">
+                  The use case diagram summarizes how unauthenticated guests, subscribers, reporters, coordinators, and admins interact with the system across authentication, map viewing, reporting, alert management, notifications, and content management.
+               </p>
+               <div class="projects__image" style="max-width: 900px; margin: 1.5rem auto 2rem auto;">
+                  <img src="assets/img/UseCaseDiagram1.jpg" alt="Online Disaster Warning System Use Case Diagram" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+               </div>
+
+               <!-- Layered Architecture -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Layered Architecture</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 950px; margin: 0 auto 1.5rem auto;">
+                  The application follows a layered architecture that separates concerns into presentation (Streamlit UI pages), business services (alert management, reporting, notification, authentication), persistence (repository layer), and database (MongoDB collections). This structure makes it easier to test, maintain, and extend the system.
+               </p>
+               <div class="projects__image" style="max-width: 900px; margin: 1.5rem auto 2rem auto;">
+                  <img src="assets/img/layered.jpg" alt="Layered Architecture of Online Disaster Warning System" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+               </div>
+
+               <!-- Sequence Diagrams -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Key Sequence Diagrams</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 950px; margin: 0 auto 1.5rem auto;">
+                  Sequence diagrams were created for the most critical workflows to validate interactions between UI, services, and the database:
+               </p>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 950px; margin: 0 auto 2rem auto;">
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.5rem 0; font-size: 1.02rem; color: var(--title-color);">User Login</h3>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Shows how credentials flow from the login UI to the authentication service and user repository, and how the system returns role-based dashboards or validation errors.
+                     </p>
+                  </div>
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.5rem 0; font-size: 1.02rem; color: var(--title-color);">Incident Report Submission</h3>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Captures the end-to-end flow from user-submitted reports (including images) through validation and persistence into the reports collection, with notifications to admins.
+                     </p>
+                  </div>
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.5rem 0; font-size: 1.02rem; color: var(--title-color);">Validate Incident Report</h3>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Shows how admins/coordinators load pending reports, review content and attachments, approve or reject them, and trigger alert creation plus subscriber notifications.
+                     </p>
+                  </div>
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.5rem 0; font-size: 1.02rem; color: var(--title-color);">Notifications & Subscription</h3>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        Details the email subscription flow (verification codes, database writes) and the alert email sending flow using the EmailService and SubscriptionRepository.
+                     </p>
+                  </div>
+               </div>
+
+               <div class="projects__image" style="max-width: 900px; margin: 0 auto 2rem auto;">
+                  <img src="assets/img/hub_sequence_admin.jpg" alt="Example Sequence Diagram for Online Disaster Warning System" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+                  <img src="assets/img/Sequence_Subscription.png" alt="Notification subscription and unsubscription sequence diagram" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); margin-top: 1.5rem;">
+                  <img src="assets/img/Sequence_Admin_Register.png" alt="Admin register and authenticate user sequence diagram" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); margin-top: 1.5rem;">
+               </div>
+
+               <!-- Database Schema & ERD -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Database Schema & ERD</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 950px; margin: 0 auto 1.5rem auto;">
+                  The backend is powered by MongoDB, organized into collections for users, reports, alerts, subscriptions, news, and notifications. Each collection is carefully designed to support fast querying for maps, dashboards, notifications, and admin workflows.
+               </p>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 950px; margin: 0 auto 2rem auto;">
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.5rem 0; font-size: 1.02rem; color: var(--title-color);">Key Collections</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li><b>admin</b>: roles (Admin, Reporter, Viewer), emails, hashed passwords, timestamps.</li>
+                        <li><b>reports</b>: disaster type, location (lat/lon, country, city), contact info, notes, images, timestamp.</li>
+                        <li><b>alerts</b>: title, type, severity, geo-coordinates, description, created_at.</li>
+                        <li><b>subscriptions</b>: subscriber email, location, subscribe_date.</li>
+                        <li><b>news</b>: author, title, content, tags, publication date.</li>
+                        <li><b>notifications</b>: subscriber email, alert reference, sent_date, content.</li>
+                     </ul>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.5rem 0; font-size: 1.02rem; color: var(--title-color);">Entity Relationships</h3>
+                     <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        The ERD highlights how user-generated reports can lead to alerts, which in turn generate notifications to subscribers. Admins manage both news and users, while subscriptions link users to geography so that alerts can be matched to impacted regions.
+                     </p>
+                  </div>
+               </div>
+
+               <div class="projects__image" style="max-width: 900px; margin: 0 auto 2rem auto;">
+                  <img src="assets/img/Database_Schema.png" alt="Database Schema for Online Disaster Warning System" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); margin-bottom: 1.5rem;">
+                  <img src="assets/img/Entity_Relationship.png" alt="Entity Relationship Diagram for Online Disaster Warning System" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); margin-top: 1.5rem;">
+               </div>
+
+               <!-- QA / Testing -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Quality Assurance & Testing</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 950px; margin: 0 auto 1.5rem auto;">
+                  The project includes both backend unit tests (Pytest) and automated UI tests (Selenium) to validate core workflows and reduce regression risk.
+               </p>
+
+               <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 950px; margin: 0 auto 2rem auto;">
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.5rem 0; font-size: 1.02rem; color: var(--title-color);">Backend Testing (Pytest)</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>Email validation, verification code generation, and subscription insertion.</li>
+                        <li>Sending verification and alert emails with mocked session services.</li>
+                        <li>Interactive map helpers: fetching GDACS data, country metadata, radius calculations, alert filtering and formatting.</li>
+                        <li>News hub: image extraction from markdown, article lookup, CRUD operations, and input validation.</li>
+                        <li>Report hub: encoding/decoding images, saving reports, and creating alerts from reports.</li>
+                        <li>Weather alert triggers: precipitation, UV index, high/low temperature, and combined alert scenarios.</li>
+                     </ul>
+                  </div>
+
+                  <div style="background: var(--container-color); padding: 1.4rem; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);">
+                     <h3 style="margin: 0 0 0.5rem 0; font-size: 1.02rem; color: var(--title-color);">UI Testing (Selenium)</h3>
+                     <ul style="margin: 0; padding-left: 1.1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text-color);">
+                        <li>Automated navigation across key user pages: Alerts Monitoring Map, Notification Settings, Submit A Report, News, and Login.</li>
+                        <li>Screenshot capture for visual regression and layout verification.</li>
+                        <li>Admin login flow with form filling and navigation to admin-only views like Review Reports and Profile.</li>
+                        <li>Detected minor icon rendering quirks in the test environment (not present in real browsers).</li>
+                     </ul>
+                  </div>
+               </div>
+
+               <div class="projects__image" style="max-width: 900px; margin: 0 auto 2rem auto;">
+                  <img src="assets/img/QA_Testing.png" alt="Summary of Backend Test Results" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12);">
+                  <img src="assets/img/QA_Backend_Alerts_ReportHub.png" alt="Backend QA results for weather alert triggers and report hub" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); margin-top: 1.5rem;">
+               </div>
+
+               <!-- UI Mockups -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">UI Mockups & Screens</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 950px; margin: 0 auto 1.5rem auto;">
+                  The UI was prototyped and iterated with Streamlit, using custom theming and CSS to move beyond the default look. Below are example mockups and final screens for the main modules.
+               </p>
+
+               <div class="projects__image" style="max-width: 1000px; margin: 1.5rem auto 2rem auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+                  <img src="assets/img/UI%20Mock-up.png" alt="Interactive Map UI" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+                  <img src="assets/img/UI.png" alt="Admin Dashboard UI" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+                  <img src="assets/img/Notification_Setting.png" alt="Notification Settings UI" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+                  <img src="assets/img/Weather_Alert.png" alt="Global Weather Alert App UI" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+                  <img src="assets/img/Report_Hub.png" alt="Submit A Report Page UI" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+                  <img src="assets/img/Alerts_Monitoring_Map.png" alt="Alerts Monitoring Map UI" class="projects__img" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);">
+               </div>
+
+               <!-- Deployment -->
+               <h2 class="section__title-2" style="text-align: center; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.6rem; font-weight: 700;">Deployment</h2>
+               <p class="about__description" style="font-size: 0.95rem; line-height: 1.7; color: var(--text-color); max-width: 950px; margin: 0 auto 2.5rem auto;">
+                  The application is deployed on Streamlit Community Cloud and connected to a MongoDB backend. Source code is version-controlled on GitHub, and the environment is defined via a <b>requirements.txt</b> file. Streamlit automatically rebuilds the app when new commits are pushed, making it easy to iterate on features and architecture.
+               </p>
+
+               <div class="about__buttons" style="margin-top: 1rem;">
+                  <a href="https://programming.streamlit.app/" target="_blank" class="button">
+                     <i class="ri-global-line"></i> View Live App
+                  </a>
+
+                  <a href="index.html#data-projects" class="button__ghost">
+                     <i class="ri-arrow-left-line"></i> Back to Projects
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+         <ul class="footer__links">
+            <li>
+               <a href="index.html#home" class="footer__link">Home</a>
+            </li>
+            <li>
+               <a href="index.html#about" class="footer__link">About</a>
+            </li>
+            <li>
+               <a href="index.html#data-projects" class="footer__link">Data Projects</a>
+            </li>
+         </ul>
+
+         <span class="footer__copy">
+            &#169; All Rights Reserved By 
+            <a href="#">Dat Nguyen.</a>
+         </span>
+      </div>
+   </footer>
+
+   <!--========== SCROLL UP ==========-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-s-line"></i>
+   </a>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
+</html>
